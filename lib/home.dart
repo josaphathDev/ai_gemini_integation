@@ -134,6 +134,7 @@ class _HomeState extends State<Home> {
     }
   }
 
+/* 
   void _scrollDown() {
     WidgetsBinding.instance.addPostFrameCallback(
     {_} =>  _scrollController.animateTo(
@@ -143,6 +144,15 @@ class _HomeState extends State<Home> {
         milliseconds:750,
       ),
       ),);
+  } */
+  void _scrollDown() {
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      _scrollController.animateTo(
+        _scrollController.position.maxScrollExtent,
+        duration: const Duration(milliseconds: 750),
+        curve: Curves.easeInOut,
+      );
+    });
   }
 
   void _showError(String messages) {

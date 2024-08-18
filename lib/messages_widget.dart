@@ -15,7 +15,7 @@ class Messages extends StatelessWidget {
     return Row(
       children: [
         Flexible(child: Container( 
-          padding: EdgeInsets.symmetric(
+          padding: const EdgeInsets.symmetric(
             vertical: 15,
             horizontal: 20,
           ),
